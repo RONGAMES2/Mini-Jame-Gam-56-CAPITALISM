@@ -19,7 +19,6 @@ scale = Vector2(1, 2.5234375)
 texture = ExtResource("1_lf13e")
 
 [node name="Timer" type="Timer" parent="." unique_id=2068186600]
-wait_time = 4.0
 autostart = true
 
 [node name="Label" type="Label" parent="." unique_id=912894674]

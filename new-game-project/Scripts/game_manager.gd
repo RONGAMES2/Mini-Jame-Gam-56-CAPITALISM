@@ -2,7 +2,9 @@ extends Node
 
 var Player = null
 
+# subject to change
 var Leather_amount = 0
+var Shoe_amount = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
