@@ -1,0 +1,15 @@
+[gd_scene format=3 uid="uid://ctxnm1j4iwp46"]
+
+[ext_resource type="PackedScene" uid="uid://be8qbmt0fe144" path="res://Scenes/player.tscn" id="1_3dogw"]
+[ext_resource type="PackedScene" uid="uid://d0rue2fjygmx1" path="res://Scenes/regen_station.tscn" id="2_r5l72"]
+[ext_resource type="PackedScene" uid="uid://dbtxw1jpbbb5i" path="res://Scenes/UI.tscn" id="3_50ct6"]
+
+[node name="Test Scene" type="Node2D" unique_id=96555768]
+
+[node name="Player" parent="." unique_id=1114874733 groups=["Player"] instance=ExtResource("1_3dogw")]
+position = Vector2(553, 324)
+
+[node name="RegenStation" parent="." unique_id=159219671 instance=ExtResource("2_r5l72")]
+position = Vector2(1279, 312)
+
+[node name="UI" parent="." unique_id=1862808448 instance=ExtResource("3_50ct6")]

@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://dbtxw1jpbbb5i"]
+
+[ext_resource type="Script" uid="uid://boleur2wrj2lj" path="res://Scripts/UI.gd" id="1_w371h"]
+
+[node name="UI" type="CanvasLayer" unique_id=1862808448]
+script = ExtResource("1_w371h")
+
+[node name="LeatherText" type="BoxContainer" parent="." unique_id=1046009919]
+offset_right = 311.0
+offset_bottom = 106.0
+
+[node name="Label" type="Label" parent="LeatherText" unique_id=1278492325]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 36
+text = "Leather: 0"
+horizontal_alignment = 1
+vertical_alignment = 1
