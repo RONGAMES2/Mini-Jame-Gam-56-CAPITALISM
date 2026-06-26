@@ -17,7 +17,7 @@ texture = ExtResource("1_o6bgn")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1827301909]
 shape = SubResource("CircleShape2D_yf5fn")
 
-[node name="Label" type="Label" parent="." unique_id=1424372471]
+[node name="Instructions" type="Label" parent="." unique_id=1424372471]
 visible = false
 offset_left = -332.0
 offset_top = -238.0
@@ -30,5 +30,18 @@ text = "Press E to Craft"
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="WarningLabel" type="Label" parent="." unique_id=1944793680]
+visible = false
+offset_left = -135.0
+offset_top = -253.0
+offset_right = 137.0
+offset_bottom = -203.0
+text = "Not Enough Leather"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="FadeTimer" type="Timer" parent="." unique_id=471626296]
+
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
+[connection signal="timeout" from="FadeTimer" to="." method="_on_fade_timer_timeout"]
