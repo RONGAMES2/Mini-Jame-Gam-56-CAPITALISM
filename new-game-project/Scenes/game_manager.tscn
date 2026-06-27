@@ -4,3 +4,9 @@
 
 [node name="GameManager" type="Node" unique_id=216660900]
 script = ExtResource("1_oj352")
+
+[node name="DeliveryTimer" type="Timer" parent="." unique_id=1605185691]
+wait_time = 30.0
+autostart = true
+
+[connection signal="timeout" from="DeliveryTimer" to="." method="_on_delivery_timer_timeout"]

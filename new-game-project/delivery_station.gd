@@ -4,9 +4,10 @@ extends Area2D
 
 var can_deliver = false
 
+
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	pass # Replace with function body.
+	pass
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
@@ -15,6 +16,12 @@ func _process(delta: float) -> void:
 		for x in range(GameManager.Shoe_amount):
 			GameManager.Money += 100
 			GameManager.Shoe_amount -= 1
+			GameManager.needed_deliveries -= 1
+	
+	if GameManager.needed_deliveries <= 0:
+		GameManager.Reset_Timer()
+		GameManager.Reset_Deliveries()
+	
 
 
 func _on_body_entered(body: Node2D) -> void:
