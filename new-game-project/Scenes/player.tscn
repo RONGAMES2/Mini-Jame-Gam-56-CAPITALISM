@@ -70,7 +70,7 @@ animations = [{
 }],
 "loop": 1,
 "name": &"Run",
-"speed": 15.0
+"speed": 10.0
 }]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
@@ -84,7 +84,7 @@ texture_filter = 1
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 animation = &"Run"
 autoplay = "Idle"
-frame_progress = 0.66206616
+frame_progress = 0.28757873
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2125648238]
 position = Vector2(-6, 30.25)
