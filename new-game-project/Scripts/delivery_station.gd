@@ -13,14 +13,21 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if can_deliver and Input.is_action_just_pressed("Deposit"):
-		for x in range(GameManager.Shoe_amount):
-			GameManager.Money += 100
-			GameManager.Shoe_amount -= 1
-			GameManager.needed_deliveries -= 1
+		if GameManager.needed_deliveries <= GameManager.Shoe_amount:
+			for x in range(GameManager.needed_deliveries):
+				GameManager.Money += 100
+				GameManager.Shoe_amount -= 1
+				GameManager.needed_deliveries -= 1
+		elif GameManager.needed_deliveries > GameManager.Shoe_amount:
+			for x in range(GameManager.Shoe_amount):
+				GameManager.Money += 100
+				GameManager.Shoe_amount -= 1
+				GameManager.needed_deliveries -= 1
 	
 	if GameManager.needed_deliveries <= 0:
 		GameManager.Reset_Timer()
 		GameManager.Reset_Deliveries()
+		GameManager.finished_deliveries += 1
 	
 
 

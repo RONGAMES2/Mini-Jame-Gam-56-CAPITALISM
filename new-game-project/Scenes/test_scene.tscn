@@ -4,20 +4,35 @@
 [ext_resource type="PackedScene" uid="uid://d0rue2fjygmx1" path="res://Scenes/regen_station.tscn" id="2_r5l72"]
 [ext_resource type="PackedScene" uid="uid://dbtxw1jpbbb5i" path="res://Scenes/UI.tscn" id="3_50ct6"]
 [ext_resource type="PackedScene" uid="uid://7w6oqnnkhg05" path="res://Scenes/craft_station.tscn" id="4_hb2xm"]
-[ext_resource type="PackedScene" uid="uid://bp08gyfr2elgf" path="res://delivery_station.tscn" id="5_ak5v8"]
+[ext_resource type="PackedScene" uid="uid://bp08gyfr2elgf" path="res://Scenes/delivery_station.tscn" id="5_ak5v8"]
+[ext_resource type="Texture2D" uid="uid://bolncpffwbub2" path="res://Assets/Sprites/stuff1.png" id="6_x033f"]
+[ext_resource type="PackedScene" uid="uid://dcwsqjpd4odop" path="res://Scenes/leather_station.tscn" id="7_rdbpf"]
 
 [node name="Test Scene" type="Node2D" unique_id=96555768]
 
 [node name="Player" parent="." unique_id=1114874733 groups=["Player"] instance=ExtResource("1_3dogw")]
-position = Vector2(553, 324)
+position = Vector2(890, 194)
 
 [node name="RegenStation" parent="." unique_id=159219671 instance=ExtResource("2_r5l72")]
-position = Vector2(1279, 312)
+position = Vector2(1033, 943)
 
 [node name="UI" parent="." unique_id=1862808448 instance=ExtResource("3_50ct6")]
 
 [node name="Craft Station" parent="." unique_id=651509721 instance=ExtResource("4_hb2xm")]
-position = Vector2(302, 956)
+position = Vector2(94, 604)
 
 [node name="Delivery Station" parent="." unique_id=1386241394 instance=ExtResource("5_ak5v8")]
-position = Vector2(1717, 986)
+position = Vector2(1548, 867)
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1825584715]
+z_index = -1
+texture_filter = 1
+offset_left = -33.0
+offset_top = -14.0
+offset_right = 1885.0
+offset_bottom = 1127.0
+texture = ExtResource("6_x033f")
+stretch_mode = 1
+
+[node name="LeatherStation" parent="TextureRect" unique_id=507199863 instance=ExtResource("7_rdbpf")]
+position = Vector2(1535, 285)

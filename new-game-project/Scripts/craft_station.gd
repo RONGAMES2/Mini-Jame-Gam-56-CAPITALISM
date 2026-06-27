@@ -6,6 +6,7 @@ extends Area2D
 @onready var fade_timer: Timer = $FadeTimer
 
 var can_craft = false
+var leather_needed = 3
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
@@ -15,12 +16,18 @@ func _ready() -> void:
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta: float) -> void:
 	if can_craft and Input.is_action_just_pressed("Craft"):
-		if GameManager.Leather_amount >= 3:
-			GameManager.Leather_amount -= 3
+		if GameManager.Leather_amount >= leather_needed:
+			GameManager.Leather_amount -= leather_needed
 			GameManager.Shoe_amount += 1
 		else:
 			fade_timer.start()
 			warning_label.visible = true
+	
+	if GameManager.finished_deliveries == GameManager.delivery_buff:
+		leather_needed += 1
+		GameManager.delivery_buff += 5
+		GameManager.min_deliveries += 2
+		GameManager.max_deliveries += 2
 
 
 func _on_body_entered(body: Node2D) -> void:

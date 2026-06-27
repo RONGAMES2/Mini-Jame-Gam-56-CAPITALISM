@@ -1,30 +1,35 @@
 [gd_scene format=3 uid="uid://7w6oqnnkhg05"]
 
 [ext_resource type="Script" uid="uid://cr5yisq8sudl" path="res://Scripts/craft_station.gd" id="1_flvjj"]
-[ext_resource type="Texture2D" uid="uid://4q335xxs2p" path="res://icon.svg" id="1_o6bgn"]
+[ext_resource type="Texture2D" uid="uid://ct237fifjqiwr" path="res://Assets/Sprites/stuff.png" id="2_flvjj"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_yf5fn"]
-radius = 514.389
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(220, 894)
 
 [node name="Craft Station" type="Area2D" unique_id=651509721]
 script = ExtResource("1_flvjj")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=163176406]
-modulate = Color(1, 0, 1, 1)
+position = Vector2(-2, -4)
 scale = Vector2(2.015625, 1.75)
-texture = ExtResource("1_o6bgn")
+texture = ExtResource("2_flvjj")
+region_enabled = true
+region_rect = Rect2(-6.649872, 14.363651, 136.73004, 517.6365)
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1827301909]
-shape = SubResource("CircleShape2D_yf5fn")
+[node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=1103086310]
+position = Vector2(-121, -39)
+polygon = PackedVector2Array(256, -433, 346, -343, 409, 34, 378, 364, 248, 515, -11, 509, -10, -4, -15, -436)
 
 [node name="Instructions" type="Label" parent="." unique_id=1424372471]
 visible = false
-offset_left = -332.0
-offset_top = -238.0
-offset_right = 338.0
-offset_bottom = -104.0
+offset_left = -73.0
+offset_top = -139.0
+offset_right = 597.0
+offset_bottom = -5.0
 size_flags_horizontal = 3
 size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_font_sizes/font_size = 44
 text = "Press E to Craft"
 horizontal_alignment = 1
@@ -32,15 +37,23 @@ vertical_alignment = 1
 
 [node name="WarningLabel" type="Label" parent="." unique_id=1944793680]
 visible = false
-offset_left = -135.0
-offset_top = -253.0
-offset_right = 137.0
-offset_bottom = -203.0
+offset_left = 124.0
+offset_top = -154.0
+offset_right = 396.0
+offset_bottom = -104.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 text = "Not Enough Leather"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="FadeTimer" type="Timer" parent="." unique_id=471626296]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1366315186]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=1017388967]
+position = Vector2(-9, -3)
+shape = SubResource("RectangleShape2D_g4v7s")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]
