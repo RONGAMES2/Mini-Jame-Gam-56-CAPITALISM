@@ -17,6 +17,11 @@ func _process(delta: float) -> void:
 	timer_text.text = "TIMER: %02d" % Timer()
 	delivery_text.text = "Needed Deliveries: " + str(GameManager.needed_deliveries)
 	
+	if GameManager.player_lost:
+		visible = false
+	else:
+		visible = true
+
 
 func Timer():
 	var time_left = GameManager.delivery_timer.time_left
