@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://dbtxw1jpbbb5i"]
 
 [ext_resource type="Script" uid="uid://boleur2wrj2lj" path="res://Scripts/UI.gd" id="1_w371h"]
+[ext_resource type="FontFile" uid="uid://b72l0qsaxa2fx" path="res://Assets/Fonts/Single_Day/SingleDay-Regular.ttf" id="2_nxvpl"]
 
 [node name="UI" type="CanvasLayer" unique_id=1862808448]
 script = ExtResource("1_w371h")
@@ -16,7 +17,8 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 58
+theme_override_fonts/font = ExtResource("2_nxvpl")
+theme_override_font_sizes/font_size = 70
 text = "Leather: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -36,12 +38,14 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 56
+theme_override_fonts/font = ExtResource("2_nxvpl")
+theme_override_font_sizes/font_size = 70
 text = "Shoes: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MoneyText" type="BoxContainer" parent="." unique_id=2089039824]
+visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
@@ -59,7 +63,8 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 41
+theme_override_fonts/font = ExtResource("2_nxvpl")
+theme_override_font_sizes/font_size = 70
 text = "Money: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -80,7 +85,8 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 60
+theme_override_fonts/font = ExtResource("2_nxvpl")
+theme_override_font_sizes/font_size = 70
 text = "TIMER: 30"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -102,7 +108,8 @@ size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 8
-theme_override_font_sizes/font_size = 46
+theme_override_fonts/font = ExtResource("2_nxvpl")
+theme_override_font_sizes/font_size = 63
 text = "Needed Deliveries: 0"
 horizontal_alignment = 1
 vertical_alignment = 1

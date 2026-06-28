@@ -76,4 +76,4 @@ Deposit={
 
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
-environment/defaults/default_clear_color=Color(0, 0, 0, 1)
+environment/defaults/default_clear_color=Color(0.08299694, 6.285575e-06, 0.08299606, 1)
