@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://bsls6tdwdaaxw" path="res://Scripts/leather_station.gd" id="1_hpa14"]
 [ext_resource type="Texture2D" uid="uid://bio2cqm5rkg6b" path="res://Assets/Sprites/items.png" id="2_hpa14"]
+[ext_resource type="FontFile" uid="uid://b72l0qsaxa2fx" path="res://Assets/Fonts/Single_Day/SingleDay-Regular.ttf" id="3_bq7m2"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_bq7m2"]
 radius = 215.33463
@@ -28,6 +29,22 @@ shape = SubResource("RectangleShape2D_yf5fn")
 
 [node name="Cooldown" type="Timer" parent="." unique_id=2018116725]
 wait_time = 0.5
+
+[node name="Instructions" type="Label" parent="." unique_id=206745870]
+visible = false
+offset_left = -333.0
+offset_top = -193.0
+offset_right = 337.0
+offset_bottom = -59.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("3_bq7m2")
+theme_override_font_sizes/font_size = 44
+text = "Press E to make leather"
+horizontal_alignment = 1
+vertical_alignment = 1
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]
 [connection signal="body_exited" from="." to="." method="_on_body_exited"]

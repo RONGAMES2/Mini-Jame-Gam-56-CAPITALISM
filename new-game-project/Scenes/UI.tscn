@@ -1,8 +1,7 @@
 [gd_scene format=3 uid="uid://dbtxw1jpbbb5i"]
 
 [ext_resource type="Script" uid="uid://boleur2wrj2lj" path="res://Scripts/UI.gd" id="1_w371h"]
-[ext_resource type="FontFile" uid="uid://dwf1rw7nom6xg" path="res://Assets/TimesNewPixel.ttf" id="2_dewlx"]
-[ext_resource type="FontFile" uid="uid://lynj5r8mhgpv" path="res://Assets/arial9bold.ttf" id="3_hfhsn"]
+[ext_resource type="FontFile" uid="uid://b72l0qsaxa2fx" path="res://Assets/Fonts/Single_Day/SingleDay-Regular.ttf" id="2_nxvpl"]
 
 [node name="UI" type="CanvasLayer" unique_id=1862808448]
 script = ExtResource("1_w371h")
@@ -16,11 +15,10 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-theme_override_constants/shadow_offset_x = 5
-theme_override_constants/shadow_offset_y = 5
-theme_override_fonts/font = ExtResource("2_dewlx")
-theme_override_font_sizes/font_size = 84
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_nxvpl")
+theme_override_font_sizes/font_size = 70
 text = "Leather: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -38,16 +36,16 @@ layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
 theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_shadow_color = Color(1, 1, 1, 1)
-theme_override_constants/shadow_offset_x = -2
-theme_override_constants/shadow_offset_y = 3
-theme_override_fonts/font = ExtResource("3_hfhsn")
-theme_override_font_sizes/font_size = 76
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("2_nxvpl")
+theme_override_font_sizes/font_size = 70
 text = "Shoes: 0"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="MoneyText" type="BoxContainer" parent="." unique_id=2089039824]
+visible = false
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0

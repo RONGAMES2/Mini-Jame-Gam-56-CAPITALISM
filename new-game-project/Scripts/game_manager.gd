@@ -8,16 +8,21 @@ var Player = null
 @onready var Money = 0
 @onready var delivery_timer: Timer = $DeliveryTimer
 
+var player_lost = false
+
 var needed_deliveries = 0
-var min_deliveries = 5
-var max_deliveries = 10
+var min_deliveries = 2
+var max_deliveries = 5
+var total_deliveries = 0
 
 var finished_deliveries = 0
 var delivery_buff = 5
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:
-	needed_deliveries = 5
+	player_lost = false
+	total_deliveries = 0
+	needed_deliveries = 3
 	finished_deliveries = 0
 	delivery_buff = 5
 	Leather_amount = 0
@@ -37,4 +42,5 @@ func _process(delta: float) -> void:
 
 
 func _on_delivery_timer_timeout() -> void:
-	get_tree().quit()
+	player_lost = true
+	get_tree().paused = true
