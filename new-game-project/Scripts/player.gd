@@ -34,6 +34,5 @@ func _physics_process(delta: float) -> void:
 	
 	if velocity == Vector2(0, 0):
 		sprite_2d.animation = "Idle"
-	
 
 	move_and_slide()

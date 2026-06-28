@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://4c678i5bjv8c" path="res://Scripts/delivery_station.gd" id="1_qt4r6"]
 [ext_resource type="Texture2D" uid="uid://bio2cqm5rkg6b" path="res://Assets/Sprites/items.png" id="2_2dtgu"]
-[ext_resource type="FontFile" uid="uid://b72l0qsaxa2fx" path="res://Assets/Fonts/Single_Day/SingleDay-Regular.ttf" id="3_qtp08"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qtp08"]
 atlas = ExtResource("2_2dtgu")
@@ -55,7 +54,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 3
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("3_qtp08")
 theme_override_font_sizes/font_size = 44
 text = "Press Q to Deliver"
 horizontal_alignment = 1

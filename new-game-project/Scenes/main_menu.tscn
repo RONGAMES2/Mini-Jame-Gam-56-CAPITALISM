@@ -2,11 +2,9 @@
 
 [ext_resource type="Script" uid="uid://c3v8iwskm725p" path="res://Scripts/main_menu.gd" id="1_28flt"]
 [ext_resource type="Texture2D" uid="uid://tjlqcbjf5jbb" path="res://Assets/Sprites/Screenshot 2026-06-28 104052.png" id="2_48xlc"]
-[ext_resource type="FontFile" uid="uid://b72l0qsaxa2fx" path="res://Assets/Fonts/Single_Day/SingleDay-Regular.ttf" id="2_opfnp"]
 [ext_resource type="Texture2D" uid="uid://cmdx82n40i7tb" path="res://Assets/Sprites/Screenshot 2026-06-28 105303.png" id="3_1ehe0"]
 [ext_resource type="Texture2D" uid="uid://dcsxcvl4ej1ku" path="res://Assets/Sprites/Screenshot 2026-06-28 110811.png" id="4_ce3w2"]
 [ext_resource type="Texture2D" uid="uid://fpworbbyfdf0" path="res://Assets/Sprites/CARROOOOTTTT.png" id="5_n45e2"]
-[ext_resource type="AudioStream" uid="uid://doxsrngx3uama" path="res://Assets/Sound/audiomass-output.mp3" id="7_cp0ys"]
 
 [sub_resource type="Theme" id="Theme_g4v7s"]
 
@@ -19,7 +17,7 @@ anchor_left = 0.5
 anchor_right = 0.5
 offset_left = -766.0
 offset_top = 94.0
-offset_right = -149.0
+offset_right = -69.0
 offset_bottom = 337.0
 grow_horizontal = 2
 
@@ -27,9 +25,8 @@ grow_horizontal = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("2_opfnp")
 theme_override_font_sizes/font_size = 58
-text = "Daniel Carrot Williams FULL COLOR"
+text = "Daniel Carrot William FULL COLOR"
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 3
@@ -51,8 +48,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_g4v7s")
-theme_override_fonts/font = ExtResource("2_opfnp")
-theme_override_font_sizes/font_size = 31
+theme_override_font_sizes/font_size = 26
 text = "Play"
 
 [node name="Quit" type="BoxContainer" parent="." unique_id=1645671369]
@@ -72,8 +68,7 @@ grow_vertical = 2
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_g4v7s")
-theme_override_fonts/font = ExtResource("2_opfnp")
-theme_override_font_sizes/font_size = 31
+theme_override_font_sizes/font_size = 26
 text = "Quit
 "
 
@@ -109,8 +104,7 @@ grow_vertical = 0
 layout_mode = 2
 size_flags_horizontal = 3
 theme = SubResource("Theme_g4v7s")
-theme_override_fonts/font = ExtResource("2_opfnp")
-theme_override_font_sizes/font_size = 31
+theme_override_font_sizes/font_size = 26
 text = "Start"
 
 [node name="LeatherStationInfo" type="BoxContainer" parent="Instructions Tab" unique_id=785397179]
@@ -118,7 +112,7 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -394.0
+offset_left = -734.0
 offset_top = 66.0
 offset_right = 734.0
 offset_bottom = 248.0
@@ -128,12 +122,10 @@ grow_horizontal = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("2_opfnp")
-theme_override_font_sizes/font_size = 31
-text = "Click the E button on the Leather Station to make leather. Leather can also passively regenerate at the Auto-Leather Station."
+theme_override_font_sizes/font_size = 28
+text = "Click the E button on the Leather Station to make leather."
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
 
 [node name="LeatherStation" type="BoxContainer" parent="Instructions Tab" unique_id=115514897]
 layout_mode = 0
@@ -153,7 +145,7 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -375.0
+offset_left = -734.0
 offset_top = 370.0
 offset_right = 734.0
 offset_bottom = 552.0
@@ -163,12 +155,10 @@ grow_horizontal = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("2_opfnp")
-theme_override_font_sizes/font_size = 31
-text = "Click the E button on the Crafting Station to make shoes. Each pair of shoes costs a certain amount of leather and the amount of leather needed to make shoes will increase as the game continues."
+theme_override_font_sizes/font_size = 28
+text = "Click the E button on the Crafting Station to make shoes."
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
 
 [node name="CraftStation" type="BoxContainer" parent="Instructions Tab" unique_id=1463168390]
 layout_mode = 0
@@ -188,9 +178,9 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -398.0
+offset_left = -734.0
 offset_top = 709.0
-offset_right = 751.0
+offset_right = 734.0
 offset_bottom = 891.0
 grow_horizontal = 2
 
@@ -198,12 +188,10 @@ grow_horizontal = 2
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 1
-theme_override_fonts/font = ExtResource("2_opfnp")
-theme_override_font_sizes/font_size = 31
-text = "Click the Q button on the Delivery Line to deliver shoes. Make sure to deliver the needed amount of shoes before time runs out."
+theme_override_font_sizes/font_size = 28
+text = "Click the Q button on the Delivery Line to deliver shoes."
 horizontal_alignment = 1
 vertical_alignment = 1
-autowrap_mode = 2
 
 [node name="DeliveryStation" type="BoxContainer" parent="Instructions Tab" unique_id=1225622121]
 layout_mode = 0
@@ -217,10 +205,6 @@ layout_mode = 2
 size_flags_horizontal = 3
 texture = ExtResource("4_ce3w2")
 expand_mode = 1
-
-[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="." unique_id=2138673550]
-stream = ExtResource("7_cp0ys")
-autoplay = true
 
 [connection signal="pressed" from="Play/PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="Quit/QuitButton" to="." method="_on_quit_button_pressed"]

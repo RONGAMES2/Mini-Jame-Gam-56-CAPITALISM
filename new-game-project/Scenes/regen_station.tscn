@@ -2,7 +2,6 @@
 
 [ext_resource type="Script" uid="uid://c86bpg6ixi5pm" path="res://Scripts/regen_station.gd" id="1_8ye41"]
 [ext_resource type="Texture2D" uid="uid://bio2cqm5rkg6b" path="res://Assets/Sprites/items.png" id="2_8ye41"]
-[ext_resource type="FontFile" uid="uid://b72l0qsaxa2fx" path="res://Assets/Fonts/Single_Day/SingleDay-Regular.ttf" id="3_bdda5"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
 size = Vector2(299, 212)
@@ -19,7 +18,6 @@ shape = SubResource("RectangleShape2D_g4v7s")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=1328009726]
 texture = ExtResource("2_8ye41")
-flip_h = true
 region_enabled = true
 region_rect = Rect2(1451.3412, 93.64891, 333.37573, 198.09282)
 
@@ -34,7 +32,6 @@ offset_right = 148.0
 offset_bottom = -160.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_fonts/font = ExtResource("3_bdda5")
 theme_override_font_sizes/font_size = 26
 text = "Item Amount: 0"
 horizontal_alignment = 1

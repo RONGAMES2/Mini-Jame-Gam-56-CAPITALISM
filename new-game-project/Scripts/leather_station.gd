@@ -1,7 +1,6 @@
 extends Area2D
 
 @onready var cooldown: Timer = $Cooldown
-@onready var instructions: Label = $Instructions
 
 var can_make = false
 var no_cool = true
@@ -23,13 +22,13 @@ func _process(delta: float) -> void:
 func _on_body_entered(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		can_make = true
-		instructions.visible = true
+		
 
 
 func _on_body_exited(body: Node2D) -> void:
 	if body.is_in_group("Player"):
 		can_make = false
-		instructions.visible = false
+		
 
 
 func _on_cooldown_timeout() -> void:

@@ -18,13 +18,11 @@ func _process(delta: float) -> void:
 				GameManager.Money += 100
 				GameManager.Shoe_amount -= 1
 				GameManager.needed_deliveries -= 1
-				GameManager.total_deliveries += 1
 		elif GameManager.needed_deliveries > GameManager.Shoe_amount:
 			for x in range(GameManager.Shoe_amount):
 				GameManager.Money += 100
 				GameManager.Shoe_amount -= 1
 				GameManager.needed_deliveries -= 1
-				GameManager.total_deliveries += 1
 	
 	if GameManager.needed_deliveries <= 0:
 		GameManager.Reset_Timer()
