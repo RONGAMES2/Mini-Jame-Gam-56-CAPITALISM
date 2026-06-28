@@ -36,11 +36,10 @@ size = Vector2(85, 442)
 script = ExtResource("1_qt4r6")
 
 [node name="CollisionShape2D" type="CollisionPolygon2D" parent="." unique_id=755202662]
-position = Vector2(-480.09998, 508)
+position = Vector2(-442, 340)
 polygon = PackedVector2Array(84, -530, 131, -452, 296, -431, 657, -440, 723, -372, 743, -61, 871, -18, 991, -106, 997, -397, 926, -634, 538, -668, 95, -648)
 
 [node name="Sprite2D" type="AnimatedSprite2D" parent="." unique_id=1637121630]
-position = Vector2(-38.099976, 160)
 sprite_frames = SubResource("SpriteFrames_g4v7s")
 autoplay = "default"
 frame_progress = 0.5261896
@@ -62,14 +61,13 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=133552012]
-position = Vector2(-274.09998, -53)
+position = Vector2(-236, -221)
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=1522286720]
 position = Vector2(287.5, 11.75)
 shape = SubResource("RectangleShape2D_2dtgu")
 
 [node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=2004211700]
-position = Vector2(-38.099976, 168)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=811706457]
 position = Vector2(394.5, 40)
