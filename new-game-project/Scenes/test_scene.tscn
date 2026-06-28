@@ -7,11 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://bp08gyfr2elgf" path="res://Scenes/delivery_station.tscn" id="5_ak5v8"]
 [ext_resource type="Texture2D" uid="uid://bolncpffwbub2" path="res://Assets/Sprites/stuff1.png" id="6_x033f"]
 [ext_resource type="PackedScene" uid="uid://dcwsqjpd4odop" path="res://Scenes/leather_station.tscn" id="7_rdbpf"]
-[ext_resource type="Script" uid="uid://b8ouj7mgdpb4o" path="res://Scripts/retry_menu.gd" id="8_d3awe"]
-[ext_resource type="FontFile" uid="uid://b72l0qsaxa2fx" path="res://Assets/Fonts/Single_Day/SingleDay-Regular.ttf" id="9_yglu3"]
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
-size = Vector2(1919, 45)
 
 [node name="Test Scene" type="Node2D" unique_id=96555768]
 
@@ -23,7 +18,6 @@ position = Vector2(890, 194)
 position = Vector2(1033, 943)
 
 [node name="UI" parent="." unique_id=1862808448 instance=ExtResource("3_50ct6")]
-visible = false
 
 [node name="Craft Station" parent="." unique_id=651509721 instance=ExtResource("4_hb2xm")]
 position = Vector2(94, 604)
@@ -43,128 +37,3 @@ stretch_mode = 1
 
 [node name="LeatherStation" parent="TextureRect" unique_id=507199863 instance=ExtResource("7_rdbpf")]
 position = Vector2(1535, 285)
-
-[node name="Wall" type="StaticBody2D" parent="." unique_id=1123096750]
-position = Vector2(-23, -48)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" unique_id=477579481]
-position = Vector2(949.5, 12.5)
-shape = SubResource("RectangleShape2D_g4v7s")
-
-[node name="Wall2" type="StaticBody2D" parent="." unique_id=269244656]
-position = Vector2(-45, -8)
-rotation = 1.5707964
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" unique_id=779805650]
-position = Vector2(949.5, 12.5)
-shape = SubResource("RectangleShape2D_g4v7s")
-
-[node name="Wall3" type="StaticBody2D" parent="." unique_id=787326873]
-position = Vector2(1926, -4)
-rotation = 1.5707964
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3" unique_id=1562599778]
-position = Vector2(949.5, 12.5)
-shape = SubResource("RectangleShape2D_g4v7s")
-
-[node name="Wall4" type="StaticBody2D" parent="." unique_id=2021837466]
-position = Vector2(-23, 1133)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall4" unique_id=833470839]
-position = Vector2(949.5, 12.5)
-shape = SubResource("RectangleShape2D_g4v7s")
-
-[node name="Retry Menu" type="CanvasLayer" parent="." unique_id=604712002]
-process_mode = 3
-script = ExtResource("8_d3awe")
-
-[node name="Retry Text" type="BoxContainer" parent="Retry Menu" unique_id=11320877]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -160.0
-offset_top = 83.0
-offset_right = 161.0
-offset_bottom = 170.0
-grow_horizontal = 2
-
-[node name="Label" type="Label" parent="Retry Menu/Retry Text" unique_id=1510031926]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("9_yglu3")
-theme_override_font_sizes/font_size = 86
-text = "You Lost!"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Retry" type="BoxContainer" parent="Retry Menu" unique_id=976895907]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -77.0
-offset_top = 103.0
-offset_right = 77.0
-offset_bottom = 170.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="RetryButton" type="Button" parent="Retry Menu/Retry" unique_id=1883680428]
-process_mode = 3
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("9_yglu3")
-theme_override_font_sizes/font_size = 58
-text = "   Retry?  "
-
-[node name="Main Menu" type="BoxContainer" parent="Retry Menu" unique_id=1440568442]
-anchors_preset = 8
-anchor_left = 0.5
-anchor_top = 0.5
-anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -77.0
-offset_top = 195.0
-offset_right = 77.0
-offset_bottom = 262.0
-grow_horizontal = 2
-grow_vertical = 2
-
-[node name="MainMenuButton" type="Button" parent="Retry Menu/Main Menu" unique_id=661699584]
-process_mode = 3
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_fonts/font = ExtResource("9_yglu3")
-theme_override_font_sizes/font_size = 58
-text = "Main Menu"
-
-[node name="DeliveredShoes" type="BoxContainer" parent="Retry Menu" unique_id=466039630]
-anchors_preset = 5
-anchor_left = 0.5
-anchor_right = 0.5
-offset_left = -290.0
-offset_top = 290.0
-offset_right = 292.0
-offset_bottom = 377.0
-grow_horizontal = 2
-
-[node name="Label" type="Label" parent="Retry Menu/DeliveredShoes" unique_id=1834877295]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 1
-theme_override_colors/font_color = Color(0, 0, 0, 1)
-theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 8
-theme_override_fonts/font = ExtResource("9_yglu3")
-theme_override_font_sizes/font_size = 86
-text = "Delivered Shoes: 0"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[connection signal="pressed" from="Retry Menu/Retry/RetryButton" to="Retry Menu" method="_on_retry_button_pressed"]
-[connection signal="pressed" from="Retry Menu/Main Menu/MainMenuButton" to="Retry Menu" method="_on_main_menu_button_pressed"]

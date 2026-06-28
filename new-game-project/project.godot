@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="Mini Jam :D"
-run/main_scene="uid://d1j7mxuqmn1ow"
+run/main_scene="uid://ctxnm1j4iwp46"
 config/features=PackedStringArray("4.7", "Mobile")
 config/icon="res://icon.svg"
 
@@ -76,4 +76,4 @@ Deposit={
 
 rendering_device/driver.windows="d3d12"
 renderer/rendering_method="mobile"
-environment/defaults/default_clear_color=Color(0.08299694, 6.285575e-06, 0.08299606, 1)
+environment/defaults/default_clear_color=Color(0, 0, 0, 1)

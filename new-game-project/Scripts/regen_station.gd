@@ -10,7 +10,7 @@ var item_amount = 0
 
 func _on_timer_timeout() -> void:
 	item_amount += 1
-	item_amount_score.text = "Leather Amount: " + str(item_amount)
+	item_amount_score.text = "Item Amount: " + str(item_amount)
 	print("item amount: " + str(item_amount))
 	regen_timer.start()
 
