@@ -8,6 +8,9 @@
 [ext_resource type="Texture2D" uid="uid://bolncpffwbub2" path="res://Assets/Sprites/stuff1.png" id="6_x033f"]
 [ext_resource type="PackedScene" uid="uid://dcwsqjpd4odop" path="res://Scenes/leather_station.tscn" id="7_rdbpf"]
 
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_g4v7s"]
+size = Vector2(1919, 45)
+
 [node name="Test Scene" type="Node2D" unique_id=96555768]
 
 [node name="Player" parent="." unique_id=1114874733 groups=["Player"] instance=ExtResource("1_3dogw")]
@@ -36,3 +39,33 @@ stretch_mode = 1
 
 [node name="LeatherStation" parent="TextureRect" unique_id=507199863 instance=ExtResource("7_rdbpf")]
 position = Vector2(1535, 285)
+
+[node name="Wall" type="StaticBody2D" parent="." unique_id=1123096750]
+position = Vector2(-23, -48)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall" unique_id=477579481]
+position = Vector2(949.5, 12.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Wall2" type="StaticBody2D" parent="." unique_id=269244656]
+position = Vector2(-45, -8)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall2" unique_id=779805650]
+position = Vector2(949.5, 12.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Wall3" type="StaticBody2D" parent="." unique_id=787326873]
+position = Vector2(1926, -4)
+rotation = 1.5707964
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall3" unique_id=1562599778]
+position = Vector2(949.5, 12.5)
+shape = SubResource("RectangleShape2D_g4v7s")
+
+[node name="Wall4" type="StaticBody2D" parent="." unique_id=2021837466]
+position = Vector2(-23, 1133)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Wall4" unique_id=833470839]
+position = Vector2(949.5, 12.5)
+shape = SubResource("RectangleShape2D_g4v7s")

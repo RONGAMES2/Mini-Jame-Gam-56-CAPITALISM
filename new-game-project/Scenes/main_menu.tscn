@@ -1,0 +1,211 @@
+[gd_scene format=3 uid="uid://d1j7mxuqmn1ow"]
+
+[ext_resource type="Script" uid="uid://c3v8iwskm725p" path="res://Scripts/main_menu.gd" id="1_28flt"]
+[ext_resource type="Texture2D" uid="uid://tjlqcbjf5jbb" path="res://Assets/Sprites/Screenshot 2026-06-28 104052.png" id="2_48xlc"]
+[ext_resource type="Texture2D" uid="uid://cmdx82n40i7tb" path="res://Assets/Sprites/Screenshot 2026-06-28 105303.png" id="3_1ehe0"]
+[ext_resource type="Texture2D" uid="uid://dcsxcvl4ej1ku" path="res://Assets/Sprites/Screenshot 2026-06-28 110811.png" id="4_ce3w2"]
+[ext_resource type="Texture2D" uid="uid://fpworbbyfdf0" path="res://Assets/Sprites/CARROOOOTTTT.png" id="5_n45e2"]
+
+[sub_resource type="Theme" id="Theme_g4v7s"]
+
+[node name="Main Menu" type="CanvasLayer" unique_id=1988588384]
+script = ExtResource("1_28flt")
+
+[node name="Title" type="BoxContainer" parent="." unique_id=1860533169]
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -766.0
+offset_top = 94.0
+offset_right = -69.0
+offset_bottom = 337.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Title" unique_id=2133693951]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 58
+text = "Daniel Carrot William FULL COLOR"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Play" type="BoxContainer" parent="." unique_id=162981178]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -535.5
+offset_top = 164.0
+offset_right = -298.5
+offset_bottom = 243.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PlayButton" type="Button" parent="Play" unique_id=1100961590]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_g4v7s")
+theme_override_font_sizes/font_size = 26
+text = "Play"
+
+[node name="Quit" type="BoxContainer" parent="." unique_id=1645671369]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -535.5
+offset_top = 276.0
+offset_right = -298.5
+offset_bottom = 355.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="QuitButton" type="Button" parent="Quit" unique_id=1633075347]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_g4v7s")
+theme_override_font_sizes/font_size = 26
+text = "Quit
+"
+
+[node name="Carrooootttt" type="Sprite2D" parent="." unique_id=1101640973]
+position = Vector2(1464, 611)
+scale = Vector2(1.4, 1.4)
+texture = ExtResource("5_n45e2")
+
+[node name="Instructions Tab" type="Control" parent="." unique_id=1939216484]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="Start" type="BoxContainer" parent="Instructions Tab" unique_id=1647150682]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -118.0
+offset_top = -127.0
+offset_right = 119.0
+offset_bottom = -48.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="StartButton" type="Button" parent="Instructions Tab/Start" unique_id=736349448]
+layout_mode = 2
+size_flags_horizontal = 3
+theme = SubResource("Theme_g4v7s")
+theme_override_font_sizes/font_size = 26
+text = "Start"
+
+[node name="LeatherStationInfo" type="BoxContainer" parent="Instructions Tab" unique_id=785397179]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -734.0
+offset_top = 66.0
+offset_right = 734.0
+offset_bottom = 248.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Instructions Tab/LeatherStationInfo" unique_id=335476439]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 28
+text = "Click the E button on the Leather Station to make leather."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LeatherStation" type="BoxContainer" parent="Instructions Tab" unique_id=115514897]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 86.0
+offset_right = 286.0
+offset_bottom = 230.0
+
+[node name="TextureRect" type="TextureRect" parent="Instructions Tab/LeatherStation" unique_id=71529754]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("2_48xlc")
+expand_mode = 1
+
+[node name="CraftStationInfo" type="BoxContainer" parent="Instructions Tab" unique_id=2123402892]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -734.0
+offset_top = 370.0
+offset_right = 734.0
+offset_bottom = 552.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Instructions Tab/CraftStationInfo" unique_id=211746255]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 28
+text = "Click the E button on the Crafting Station to make shoes."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CraftStation" type="BoxContainer" parent="Instructions Tab" unique_id=1463168390]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 289.0
+offset_right = 286.0
+offset_bottom = 647.0
+
+[node name="TextureRect" type="TextureRect" parent="Instructions Tab/CraftStation" unique_id=1742622003]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("3_1ehe0")
+expand_mode = 1
+
+[node name="DeliveryStationInfo" type="BoxContainer" parent="Instructions Tab" unique_id=160041641]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -734.0
+offset_top = 709.0
+offset_right = 734.0
+offset_bottom = 891.0
+grow_horizontal = 2
+
+[node name="Label" type="Label" parent="Instructions Tab/DeliveryStationInfo" unique_id=143731310]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+theme_override_font_sizes/font_size = 28
+text = "Click the Q button on the Delivery Line to deliver shoes."
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DeliveryStation" type="BoxContainer" parent="Instructions Tab" unique_id=1225622121]
+layout_mode = 0
+offset_left = 81.0
+offset_top = 711.0
+offset_right = 424.0
+offset_bottom = 986.0
+
+[node name="TextureRect" type="TextureRect" parent="Instructions Tab/DeliveryStation" unique_id=790827219]
+layout_mode = 2
+size_flags_horizontal = 3
+texture = ExtResource("4_ce3w2")
+expand_mode = 1
+
+[connection signal="pressed" from="Play/PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="Quit/QuitButton" to="." method="_on_quit_button_pressed"]
+[connection signal="pressed" from="Instructions Tab/Start/StartButton" to="." method="_on_start_button_pressed"]
